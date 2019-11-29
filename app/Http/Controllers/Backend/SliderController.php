@@ -18,7 +18,7 @@ class SliderController extends Controller
     {
         $slide = Slider::get();
         return view('slider.index')
-            ->with('slide', $slide);
+            ->with('slides', $slide);
     }
 
     /**
@@ -59,8 +59,8 @@ class SliderController extends Controller
      */
     public function show($id)
     {
-        //$slide = Slider::find(id);
-        // return view('slider.show')->with('slide', $slide);
+        $slide = Slider::find($id);
+        return view('slider.show')->with('slides', $slide);
     }
 
     /**
@@ -71,7 +71,8 @@ class SliderController extends Controller
      */
     public function edit($id)
     {
-        //
+        $slide = Slider::find($id);
+        return view('slider.edit')->with('slides', $slide);
     }
 
     /**
@@ -83,7 +84,15 @@ class SliderController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $slide = Slider::find($id)->update($request->all());
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $imageName = Str::random('32') . '.' . $image->getClientOriginalExtension();
+            $image->move('backend/slider/', $imageName);
+            $slide->image = $imageName;
+        }
+        $slide->save();
+        return redirect(route('slider.index'));
     }
 
     /**
@@ -94,6 +103,7 @@ class SliderController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $slide = Slider::find($id)->delete();
+        return redirect()->back();
     }
 }
