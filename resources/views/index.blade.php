@@ -46,10 +46,12 @@
 
     <header class="app-header navbar">
         <a class="navbar-brand" href="{{route('index')}}">
-            <img class="navbar-brand-full" src="backend/src/img/brand/a.png" width="50" height="50">
-            <img class="navbar-brand-full" src="backend/src/img/brand/admin.png" width="100" height="50">
+            <img class="navbar-brand-full" src="{{asset('backend/src/img/brand/a.png')}}" width="50" height="50"
+                alt="adminlogo">
+            <img class="navbar-brand-full" src="{{asset('backend/src/img/brand/admin.png')}}" width="100" height="50"
+                alt="admin">
         </a>
-        <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
+        <button class=" navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
             <span class="navbar-toggler-icon"></span>
         </button>
         <ul class="nav navbar-nav d-md-down-none">
@@ -68,7 +70,7 @@
             <li class="nav-item dropdown">
                 <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
                     aria-expanded="false">
-                    <img class="img-avatar" src="backend/src/img/avatars/shreeya.jpg" alt="admin@bootstrapmaster.com">
+                    <img class="img-avatar" src="{{asset('backend/src/img/avatars/shreeya.jpg')}}" alt="AdminShreeya">
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
                     <div class="dropdown-header text-center">
@@ -123,7 +125,8 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
                             aria-expanded="false">
-                            <img class="img-avatar" src="backend/src/img/slide.png" alt="admin@bootstrapmaster.com">
+                            <img class="img-avatar" src="{{asset('backend/src/img/slide.png')}}" alt="slider"
+                                width="200" height="50">
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <div class="dropdown-header text-center">
@@ -143,7 +146,8 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
                             aria-expanded="false">
-                            <img class="img-avatar" src="backend/src/img/service.jpeg" alt="admin@bootstrapmaster.com">
+                            <img class="img-avatar" src="{{asset('backend/src/img/service.jpeg')}}" alt="service"
+                                width="200" height="100">
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <div class="dropdown-header text-center">
@@ -163,8 +167,8 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
                             aria-expanded="false">
-                            <img class="img-avatar" src="backend/src/img/testimonial.jpeg"
-                                alt="admin@bootstrapmaster.com">
+                            <img class="img-avatar" src="{{asset('backend/src/img/testimonial.jpeg')}}"
+                                alt="testimonial" width="200" height="100">
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <div class="dropdown-header text-center">
@@ -184,7 +188,8 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
                             aria-expanded="false">
-                            <img class="img-avatar" src="backend/src/img/team.jpeg" alt="admin@bootstrapmaster.com">
+                            <img class="img-avatar" src="{{asset('backend/src/img/team.jpeg')}}" alt="team" width="200"
+                                height="100">
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <div class="dropdown-header text-center">
@@ -204,7 +209,8 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
                             aria-expanded="false">
-                            <img class="img-avatar" src="backend/src/img/clientss.png" alt="admin@bootstrapmaster.com">
+                            <img class="img-avatar" src="{{asset('backend/src/img/clientss.png')}}" alt="client"
+                                width="200" height="100">
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <div class="dropdown-header text-center">

@@ -16,12 +16,15 @@
         <tr>
             <td>{{ $slide->id }}</td>
             <td><img src="{{ asset('backend/slider/'.$slide->image)}}"></td>
-            <td><button class="btn btn-md btn-warning"><a href="{{ url('slider/'.$slide->id.'/edit') }}">Edit</a></button></td>
-            <td> <form action="{{ url('slider/'.$slide->id) }}" method="post">
-                @csrf
-                @method('delete')
+            <td><button class="btn btn-md btn-warning"><a
+                        href="{{ url('slider/'.$slide->id.'/edit') }}">Edit</a></button></td>
+            <td>
+                <form action="{{ url('slider/'.$slide->id) }}" method="post">
+                    @csrf
+                    @method('delete')
                     <button class="btn btn-md btn-danger">delete</button>
-            </form></td>
+                </form>
+            </td>
         </tr>
         @endforeach
     </tbody>
